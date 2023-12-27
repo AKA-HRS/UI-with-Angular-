@@ -1,21 +1,38 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 
 .content, .profile{
     border: 1px solid black;
     padding: 1vw;
 }
 .content{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-area: content;
 }
 .profile{
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
     grid-area: profile;
 }
 .main-body{
+    display: -ms-grid;
     display: grid;
-    grid-template-areas: 'content content content profile';
+        grid-template-areas: 'content content content profile';
 }
 #title{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 #title input{
  width: 15vw;
@@ -26,7 +43,8 @@
  padding: 2px 5px;
 }
 .card{
-    filter: drop-shadow(1px 1px 2px #888a8c);
+    -webkit-filter: drop-shadow(1px 1px 2px #888a8c);
+            filter: drop-shadow(1px 1px 2px #888a8c);
     
 }
 #heart{
@@ -34,21 +52,32 @@
     background-repeat: no-repeat;
     background-position-y: center;
     background-size: contain;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 24.25%;
     height: 200px;
     min-width: 160px;
     margin-right: 1%!important;
 }
 .heading{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     line-height: normal;
     min-height: 22.5px;
     color: #ffffff;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 10px;
     padding: 18px 18px 12px;
     font-weight: 700!important;
@@ -59,19 +88,26 @@
 }
 .data{
     padding: 60px 18px 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 10px;
     font-size: 20px!important;
     color: #ffffff;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     float: left;
-    align-items: baseline;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
 }
 .data h1{
     font-size: 36px;
     font-weight: 600;
     color: #fff;
-    align-self: baseline;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
     width: auto;
     white-space: nowrap;
 }
